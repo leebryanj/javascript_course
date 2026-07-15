@@ -7,7 +7,7 @@ The purpose of this repository is to document my learning progress and provide a
 ## Course Information
 
 **Course:**  
-Learn JavaScript - Full Course for Beginners
+Learn JavaScript – Full Course for Beginners
 
 **Instructor:**  
 Beau Carnes
@@ -16,7 +16,7 @@ Beau Carnes
 freeCodeCamp.org
 
 **Original Tutorial:**  
-https://www.youtube.com/watch?v=PkZNo7MFNFg
+[Learn JavaScript – Full Course for Beginners](https://www.youtube.com/watch?v=PkZNo7MFNFg)
 
 ## Repository Contents
 
@@ -29,6 +29,6 @@ https://www.youtube.com/watch?v=PkZNo7MFNFg
 
 This repository was created for educational and portfolio purposes. All credit for the instructional content belongs to Beau Carnes and freeCodeCamp.org.
 
-## License
+## Disclaimer
 
-This repository is licensed under the MIT License. See the LICENSE file for details.
+This repository is provided for educational and portfolio purposes only. It documents my personal learning and practice while following publicly available course materials.
