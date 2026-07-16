@@ -10,3 +10,6 @@ var myArray = ["Quincy", 1];
 var ourArrayNested = [["the universe, 42"], ["everything", 101010]];
 
 var myArrayNested = [["Bulls", 23], ["White Sox", 45]];
+
+// Another Nested Array Example: Shopping List
+var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 12]];
