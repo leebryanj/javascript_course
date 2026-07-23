@@ -60,4 +60,74 @@ function getTempOfTmrw(avgTemperatures) {
     return tempOfTomorrow;
 }
 
-console.log("getTempOfTmrw(AVG_TEMPERATURES):", getTempOfTmrw(AVG_TEMPERATURES))
+console.log("getTempOfTmrw(AVG_TEMPERATURES):", getTempOfTmrw(AVG_TEMPERATURES));
+
+// Destructuring Assignment with Nested Objects
+// Use destructuring assignment to assign variables from nested objects.
+const LOCAL_FORECAST = {
+    today: { min: 72, max: 83 },
+    tomorrow: { min: 73.3, max: 84.6 }
+}
+
+function getMaxOfTmrw(forecast) {
+    "use strct";
+    // destructure 2 times. Take tomorrow from forecast. Take max from previous destructure and assign to maxOfTomorrow
+    const { tomorrow: { max: maxOfTomorrow } } = forecast;
+
+    return maxOfTomorrow;
+}
+
+console.log("getMaxOfTmrw(LOCAL_FORECAST):", getMaxOfTmrw(LOCAL_FORECAST));
+
+// Use Destructuring Assignment to Assign Variables from Arrays
+// You can use destructuring assignment to assign variables from arrays.
+// The difference between destructuring from arrays and destructuring from objects is that you cannot specify which element from the array to go into a variable. It just goes in order.
+const [zArr, xArr] = [1, 2, 3, 4, 5, 6];
+console.log("zArr, xArr:", zArr, xArr);
+// You could add commas to jump positions
+const [zArr2, xArr2, , yArr2] = [1, 2, 3, 4, 5, 6];
+console.log("zArr2, xArr2, yArr2:", zArr2, xArr2, yArr2);
+
+// You can use destructuring of arrays to switch the places of variables
+let aArr = 8, bArr = 6;
+(() => {
+    "use strict";
+    [aArr, bArr] = [bArr, aArr]
+})();
+console.log("aArr:", aArr);
+console.log("bArr:", bArr);
+
+// Use Destructuring Assignment with the Rest Operator
+// We can use destructuring assignment with the rest operator to reassign array elements.
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+    // We want to remove the first 2 elements
+    const [, , ...arr] = list; // do nothing for the 1st and 2nd elements, and put everything else into arr variable
+
+    return arr;
+}
+const arr = removeFirstTwo(source);
+console.log("arr:", arr);
+console.log("source:", source);
+
+// Use Destrcturing Assignment to Pass an Object as a Function's Parameters
+// You can use destructuring assignments to pass an object as a function's parameter.
+const stats = {
+    max: 56.78,
+    standard_deviation: 4.34,
+    median: 34.54,
+    mode: 23.87,
+    min: -0.75,
+    average: 35.85
+};
+const half = (function () {
+    /*
+    return function half(stats) { // half function gets stats argument. Instead of passing the whole object, we can just pass what we need
+    */
+    return function half({ max, min }) { // when stats is passed in, it is destructured to just the max and min variables
+        return (max + min) / 2.0;
+    };
+})();
+console.log("stats:", stats);
+console.log("half(stats):", half(stats)); // stats is being passed when it is called down here
+// This technique is commonly used with API calls. You can use destructuring to just get the information you need.
