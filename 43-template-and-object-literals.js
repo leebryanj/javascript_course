@@ -35,3 +35,21 @@ makeList(result.failure) should return:
 // Each element in the array is a template literal that has some HTML in it with values from values passed in.
 const resultDisplayArray = makeList(result.failure);
 console.log(resultDisplayArray);
+
+// Write Concise Object Literal Declarations Using Simple Fields
+// ES6 added support for easily defining object literals.
+const createPerson = (name, age, gender) => {
+    // returning an object with the passed in variables
+    // there is some repetition here with key: value
+    return {
+        name: name,
+        age: age,
+        gender: gender
+    };
+};
+console.log("createPerson:", createPerson("Zodiac Hasbro", 56, "male"));
+
+// If you want to create an object where the key is the name of the variable, and the value is the value of the variable (ie. they are the same), you can just do:
+const createPersonLiteral = (name, age, gender) => ({ name, age, gender });
+console.log("createPersonLiteral:", createPersonLiteral("Zodiac Hasbro", 56, "male"));
+// This code does the same thing as the previous createPerson code did.
